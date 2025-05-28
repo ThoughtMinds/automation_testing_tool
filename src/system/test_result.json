@@ -1,0 +1,52 @@
+[
+    {
+        "description": "Verify that the user can upload a document by dragging and dropping a file.",
+        "pre_condition": "User is on the 'Upload Document' page.",
+        "test_steps": [
+            "Open the file explorer.",
+            "Drag a document file.",
+            "Drop it in the 'Drop file here' area."
+        ],
+        "expected_result": "The document uploads successfully, and a success message is displayed."
+    },
+    {
+        "description": "Verify that the user can upload a document by clicking the 'Browse' button.",
+        "pre_condition": "User is on the 'Upload Document' page.",
+        "test_steps": [
+            "Click on the 'Browse' button.",
+            "Select a document file from the file explorer.",
+            "Confirm the selection."
+        ],
+        "expected_result": "The document uploads successfully, and a success message is displayed."
+    },
+    {
+        "description": "Verify that the 'No violations available' message is shown when there are no violations.",
+        "pre_condition": "User is on the 'Upload Document' page with no uploaded documents.",
+        "test_steps": [],
+        "expected_result": "The message 'No violations available' is displayed."
+    },
+    {
+        "description": "Verify the navigation to 'Violation Search' from the sidebar.",
+        "pre_condition": "User is logged in and on any page within the application.",
+        "test_steps": [
+            "Click on 'Violation Search' in the sidebar."
+        ],
+        "expected_result": "User is navigated to the 'Violation Search' page."
+    },
+    {
+        "description": "Verify the navigation to 'Dashboard' from the sidebar.",
+        "pre_condition": "User is logged in and on any page within the application.",
+        "test_steps": [
+            "Click on 'Dashboard' in the sidebar."
+        ],
+        "expected_result": "User is navigated to the 'Dashboard' page."
+    },
+    {
+        "description": "Verify the link to 'view pending violations' works correctly.",
+        "pre_condition": "User is on the 'Upload Document' page.",
+        "test_steps": [
+            "Click on the 'view pending violations' link."
+        ],
+        "expected_result": "User is navigated to the page showing pending violations."
+    }
+]
