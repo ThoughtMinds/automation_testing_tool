@@ -1,9 +1,9 @@
 import * as xlsx from 'xlsx';
 import { TestCase } from '../interfase/testcase';
 
-export default async (data: any) => {
+export default async (data: any, url: string) => {
     try {
-        const parsed = transformToExcelFormat(data)
+        const parsed = transformToExcelFormat(data, url)
 
         const workbook = xlsx.utils.book_new();
 
@@ -24,7 +24,7 @@ export default async (data: any) => {
     }
 };
 
-const transformToExcelFormat = (testCases: TestCase[]) => {
+const transformToExcelFormat = (testCases: TestCase[], url: string) => {
   return testCases.map((item, index) => ({
     'Sl. No': index + 1,
     'Test Case ID': `TSC-${index + 1}`,
@@ -36,6 +36,7 @@ const transformToExcelFormat = (testCases: TestCase[]) => {
     'Test Data': '',
     'Expected Result': item.expected_result,
     'Actual Result': '',
+    'url': url,
     'Status': ''
   }));
 };
